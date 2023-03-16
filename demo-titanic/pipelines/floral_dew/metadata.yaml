@@ -1,0 +1,64 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: plot_test_draft
+  status: updated
+  type: scratchpad
+  upstream_blocks: []
+  uuid: plot_test_draft
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - extract_and_impute_numbers
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: titanic_loader
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: titanic_loader
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - train_model
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: extract and impute numbers
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - titanic_loader
+  uuid: extract_and_impute_numbers
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: train model
+  status: executed
+  type: data_exporter
+  upstream_blocks:
+  - extract_and_impute_numbers
+  uuid: train_model
+data_integration: null
+description: null
+extensions: {}
+name: floral dew
+type: python
+uuid: floral_dew
+widgets: []
